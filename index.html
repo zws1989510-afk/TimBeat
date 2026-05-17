@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeBeat - 技术支持</title>
+    <style>
+        :root {
+            --primary: #007AFF;
+            --primary-light: #E5F1FF;
+            --text-primary: #1D1D1F;
+            --text-secondary: #86868B;
+            --background: #F5F5F7;
+            --card-bg: #FFFFFF;
+            --border: #D2D2D7;
+            --max-width: 680px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, var(--primary) 0%, #5856D6 100%);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 32px rgba(0, 122, 255, 0.3);
+        }
+
+        .app-icon svg {
+            width: 50px;
+            height: 50px;
+            fill: white;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .version {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .card h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card h2::before {
+            content: "";
+            width: 4px;
+            height: 18px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .card p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card li {
+            font-size: 15px;
+            color: var(--text-secondary);
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .card li:last-child {
+            border-bottom: none;
+        }
+
+        .card li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .highlight-box {
+            background: var(--primary-light);
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 16px;
+        }
+
+        .highlight-box p {
+            color: var(--primary);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .contact-section {
+            text-align: center;
+            margin-top: 40px;
+            padding: 32px 24px;
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .contact-section h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+
+        .contact-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+            color: var(--primary);
+            text-decoration: none;
+            padding: 12px 24px;
+            background: var(--primary-light);
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .contact-email:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .divider {
+            height: 1px;
+            background: var(--border);
+            margin: 24px 0;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .footer p {
+            margin-bottom: 4px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 24px 16px 60px;
+            }
+
+            .app-icon {
+                width: 80px;
+                height: 80px;
+                border-radius: 18px;
+            }
+
+            .app-icon svg {
+                width: 40px;
+                height: 40px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .card h2 {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="app-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
+                </svg>
+            </div>
+            <h1>TimeBeat</h1>
+            <p class="version">版本 1.0.0</p>
+        </header>
+
+        <div class="card">
+            <h2>关于 TimeBeat</h2>
+            <p>TimeBeat 是一款专注于时间管理的 iOS 应用，帮助您追踪应用使用时长，建立健康的数字生活习惯。通过智能提醒功能，让您告别手机成瘾，专注真正重要的事情。</p>
+        </div>
+
+        <div class="card">
+            <h2>核心功能</h2>
+            <ul>
+                <li>实时追踪应用使用时长，了解每日数字足迹</li>
+                <li>自定义提醒间隔，当使用时间超标时及时提醒</li>
+                <li>智能防拦截机制，避免提醒过于频繁</li>
+                <li>支持多应用同时监测，独立计算各应用时长</li>
+                <li>简洁直观的统计图表，一目了然</li>
+                <li>深色模式支持，护眼舒适</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>隐私说明</h2>
+            <p>TimeBeat 高度重视您的隐私保护：</p>
+            <ul>
+                <li>所有数据仅存储在您的本地设备，不会上传至任何服务器</li>
+                <li>应用使用数据来自系统 Screen Time API，我们无法访问原始数据</li>
+                <li>我们不会收集、共享或出售您的任何个人信息</li>
+                <li>应用无需注册账号，无需提供个人信息</li>
+            </ul>
+            <div class="highlight-box">
+                <p>✓ 完全本地化存储 | ✓ 无数据分析追踪 | ✓ 无第三方 SDK</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>使用条款</h2>
+            <p>使用 TimeBeat 即表示您同意以下条款：</p>
+            <ul>
+                <li>本应用仅作为个人时间管理工具使用</li>
+                <li>应用内的提醒功能为辅助性质，不保证 100% 准时送达</li>
+                <li>由于系统限制，实际提醒可能有 1-5 分钟延迟</li>
+                <li>请确保应用在后台保持运行以确保功能正常</li>
+                <li>我们保留随时更新服务条款的权利</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>系统要求</h2>
+            <ul>
+                <li>iOS 15.0 或更高版本</li>
+                <li>iPhone、iPad 兼容</li>
+                <li>需要 Screen Time 权限授权</li>
+                <li>需要通知权限以接收提醒</li>
+            </ul>
+        </div>
+
+        <div class="contact-section">
+            <h2>联系我们</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 15px;">
+                如有任何问题、建议或反馈，欢迎通过邮件联系我们
+            </p>
+            <a href="mailto:zws1989510@163.com" class="contact-email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                zws1989510@163.com
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 TimeBeat. 保留所有权利。</p>
+            <p>让每一分钟都有意义。</p>
+        </div>
+    </div>
+</body>
+</html>
